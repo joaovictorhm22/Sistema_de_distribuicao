@@ -25,7 +25,7 @@ Persistencia::Persistencia(){}
 
 
 void Persistencia::salvarInsumos(vector<Local *> locais){
-  escritaArquivo.open("backup.txt");
+  escritaArquivo.open("./src/db/backup.txt");
   for (int i = 0; i < locais.size(); i++){
     for (int j = 0; j < locais[i]->sizeInsumos(); j++){ 
       string linha;
@@ -60,13 +60,13 @@ void Persistencia::salvarInsumos(vector<Local *> locais){
 void Persistencia::leInsumos(vector<Local *> locais){
   string linha;
   string delimitador = ",";
-  vector<string> palavras{};
+  vector<string> palavras;
   size_t pos;
   int local, tipoInsumo, quantidade, valorUnitario,tipo, quantDose,intervalo;
 
-  leituraArquivo.open("backup.txt");
+  leituraArquivo.open("./src/db/backup.txt");
   if (leituraArquivo.is_open()){ //VERIFICAR SE O ARQUIVO TA ABERTO
-  
+
     while (getline(leituraArquivo, linha)){                                         
       string aux = linha;
       while ((pos = aux.find(delimitador)) != string::npos){

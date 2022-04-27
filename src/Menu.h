@@ -20,7 +20,7 @@ public:
 
 int Menu::menuPrincipal(){ 
   int opcaoPrograma = 0;
-  system ("cls");
+  system ("clear");
   cout << "---------------- Programa ----------------" << endl;
   cout << "1 - Cadatro de insumo: " << endl;
   cout << "2 - Consulta de todos insumo: " << endl;
@@ -35,7 +35,7 @@ int Menu::menuPrincipal(){
 
 int Menu::telaCadastroInsumo(){// retorna a opcao de insumo que deseja cadastrar 
   int opcao = 0;
-  system ("cls");
+  system ("clear");
   cout << "-------------- Cadastro de Insumo --------------" << endl;
   cout << "1 - EPI" << endl;
   cout << "2 - Medicamento" << endl;
@@ -48,7 +48,7 @@ int Menu::telaCadastroInsumo(){// retorna a opcao de insumo que deseja cadastrar
 int Menu::telaConsultarInsumo(){ 
 
   int opcao = 0;
-  system ("cls");
+  system ("clear");
   cout << "-------------- Consulta de Insumo --------------" << endl;
   cout << "1 - EPI" << endl;
   cout << "2 - Medicamento" << endl;
@@ -60,20 +60,20 @@ int Menu::telaConsultarInsumo(){
 
 int Menu::telaDeLocais(){
   int opcao = 0;
-  system("cls");
+  system("clear");
   cout << "-------------- LOCAIS --------------" << endl;
   cout << "0 - MINISTERIO DA SAUDE" << endl;
   this->estados();
   cout << "Em qual estoque voce deseja consultar o insumo?" << endl;
   cin >> opcao;
- system("cls");
+ system("clear");
   return opcao;
 }
 
 int Menu::telaEstado(){
   int opcao = 0;
   
-  system("cls");
+  system("clear");
   cout << "-------------- Estados --------------" << endl;
   this->estados();
   cout << "Para qual estado você deseja distribuir?" << endl;
@@ -83,7 +83,7 @@ int Menu::telaEstado(){
 
 int Menu::telaDistribuirInsumo(){
   int opcao = 0;
-  system("cls");
+  system("clear");
   cout << "-------------- Distribui de Insumo --------------" << endl;
   cout << "1 - EPI" << endl;
   cout << "2 - Medicamento" << endl;

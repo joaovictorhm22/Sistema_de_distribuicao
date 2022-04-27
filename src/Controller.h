@@ -51,30 +51,24 @@ void Controller::main(){
       executanto = false;
       break;
     case 1:
-    //  system("cls");  
       this->cadastrarInsumosMS(); 
-   //   system("pause");
-     // system("cls"); 
       break;
     case 2:
       this->consultaInsumos();
       system("pause");
-    //  system("cls");
       break;
     case 3:
-      system("cls");
+      system("clear");
       this->consultaInsumosDescricao(); 
-    
       break;
     case 4:
-      system("cls");
+      system("clear");
       this->consultaInsumosPorTipo(); 
    
       break;
     case 5:
       this->distribuiInsumos(); 
       system("pause");
-   //   system("cls");
       break;
     default:
       cout << "Opcao invalida" << endl;
@@ -86,10 +80,9 @@ void Controller::main(){
 void Controller::cadastrarInsumosMS(){ 
   int opcao = 0;
   opcao = this->menu->telaCadastroInsumo(); // 1-EPI 2-MEDICAMENTO 3-VACINA
-  system("cls"); 
+  system("clear"); 
   switch (opcao){
   case 1: //EPI
-  //system("cls"); 
     this->locais[0]->cadastraEPI();  // cadastra no MS que é o indice 0 do vector de locais um objeto EPI
     break;
   case 2:
@@ -127,7 +120,7 @@ void Controller::consultaInsumosDescricao(){
 }
 
 void Controller::consultaInsumosPorTipo(){
- // system("cls");
+ // system("clear");
   int opcao = 0;
   opcao = this->menu->telaConsultarInsumo();  //1-EPI 2- MEDICAMENTO 3- VACINA
   switch (opcao){
@@ -240,7 +233,7 @@ void Controller::distribuiInsumos(){
 
 void Controller::imprimeTudo(int indice){ 
   int tamanho = this->locais[indice]->sizeInsumos(); // pegar o tamanho do vetor dos insumos
-  system("cls");
+  system("clear");
   cout << "------------------ EPI ------------------" << endl;
   for (int i = 0; i < tamanho; i++){ //vai percorrer o vetor de insumos daquele local
     if (this->locais[indice]->getInsumo(i)->getTipoInsumo() == 1){ //se o tipo de insumo for epi    
@@ -263,7 +256,7 @@ void Controller::imprimeTudo(int indice){
 
 void Controller::imprimeTudoPorTipo(int indice, int tipo) 
 {
-  system("cls");
+  system("clear");
   if (tipo == 1){
     cout << "------------------ EPI ------------------" << endl;
     int tamanho = this->locais[indice]->sizeInsumos();
@@ -292,12 +285,12 @@ void Controller::imprimeTudoPorTipo(int indice, int tipo)
     }
   }
   system("pause");
-  system("cls");
+  system("clear");
 }
 
 void Controller::imprimeTudoComDescricao(int indice){ 
   int tamanho = this->locais[indice]->sizeInsumos();
-  system ("cls");
+  system ("clear");
   cout << "------------------ EPI ------------------" << endl;
   for (int i = 0; i < tamanho; i++){
     if (this->locais[indice]->getInsumo(i)->getTipoInsumo() == 1){
@@ -317,7 +310,7 @@ void Controller::imprimeTudoComDescricao(int indice){
     }
   }
   system ("pause");
-  //system("cls");
+  //system("clear");
 }
 
 void Controller::listarInsumo(int tipo){ 
